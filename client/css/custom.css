@@ -1,0 +1,21 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	background-color: #99B4B7;
+}
+
+.navigation {
+	position: fixed;
+	top: 10%;
+	margin-right: 50px;
+	background-color: white;
+	display: inline-block;
+	width: 150px !important;
+}
+
+.navigation ul li a {
+	border-left-color: #4db6ac !important;
+}
