@@ -4,18 +4,192 @@
 }
 
 body{
-	background-color: #99B4B7;
+	background-color: #1e1e1e;
+	color: white;
 }
 
-.navigation {
-	position: fixed;
-	top: 10%;
-	margin-right: 50px;
-	background-color: white;
-	display: inline-block;
-	width: 150px !important;
-}
 
-.navigation ul li a {
-	border-left-color: #4db6ac !important;
-}
+/*	.background_img {
+		max-width: 100%;
+		height: auto;
+	}*/
+	.sidebar {
+		position: fixed;
+		height: 100%;
+		width:300px;
+		background-color: #1e1e1e;
+	}
+		.sidebar ul {
+			margin-top: 50px;
+		}
+
+		.sidebar ul li a {
+			border-left-color: white !important;
+			border-left-width: 8px !important;
+			color: #CDBFA3;
+			font-size: 35pt;
+			margin-bottom: 50px;
+			margin-left: 10px;
+		}
+			.sidebar ul li a.active {
+				color: #d32f2f;
+			}
+
+		.linkedin {
+			display: inline-block;
+			margin-left: 43.5px;
+		}
+		.linkedin img {
+			height: 50px;
+			width: auto;
+		}
+		.github {
+			display: inline-block;
+			margin-left: 43.5px;
+		}
+		.github img {
+			height: 50px;
+			width: auto;
+		}
+	.main_content{
+		width: auto;
+		position: relative;
+		margin-left: 300px;
+		z-index: 1;
+		overflow: auto;
+	}
+	#Home{
+		width: auto;
+		height: 100%;
+		display: block;
+		position: relative;
+		padding: 0 !important;
+		background-color: #1e1e1e;
+	}
+	#Home h1{
+		position: absolute;
+		color: #CDBFA3;
+		font-size: 8.5vw;
+		top: 25%;
+		left: 10%;
+	}
+	#Home p {
+		position: absolute;
+		color: white;
+		top: 50%;
+		left: 10%;
+		font-size: 2vw;
+		width: 80%;
+	}
+	#Projects{
+		width: auto;
+		height: 100%;
+		display: block;
+		padding: 0 !important;
+		background-color: #1e1e1e;
+
+	}
+		.project {
+			height: 350px;
+			width: 90%;
+			display: block;
+			margin-top: 50px !important;
+/*			margin: 50px 25px 0 0;*/
+ 			margin: 0 auto;
+		}
+			.project h3 {
+				font-size: 1.5vw;
+				margin-left: 500px;
+				display: block;
+			}
+			.project p {
+				font-size: 1vw;
+				margin-left: 500px;
+				margin-top: 10px;
+				display: inline-block;
+				width: 70%;
+			}
+		#Projects ul li {
+			opacity: 0;
+		}
+		#clicked{
+			display: inline-block;
+			position: absolute;
+			margin-left: 150px;
+			margin-top: 125px;
+			opacity: 0;
+			color: white;
+			font-size: 2.5vw;
+		}
+		 img.pic {
+			height: 350px;
+			width: 350px;
+			display: inline-block;
+			position: absolute;
+			left: 10%;
+		}
+		img:hover {
+			opacity: 0.3;
+		}
+		img:hover ~ #clicked{
+			opacity: 1;
+		}
+
+	#Experience{
+		width: auto;
+		height: 100%;
+		display: block;
+		padding: 0 !important;
+	}
+		.resume {
+			height: 80%;
+			margin: 100px;
+			
+		}
+
+	#Contact{
+		width: auto;
+		height: 83.5%;
+		display: block;
+		padding: 0 !important;
+		background-color: #1e1e1e;
+	}
+		#Contact form input {
+			color: white;
+		}
+		#Contact form textarea {
+			color: white;
+		}
+			#Contact form label{
+				color: white;
+			}
+			#Contact form input:focus {
+				border-bottom-color:#d32f2f;
+				box-shadow: 0 1px 0 0 #d32f2f;
+			}
+			#Contact form label.active{
+				color:#d32f2f;
+			}
+			input:-webkit-autofill,
+			input:-webkit-autofill:hover,
+			input:-webkit-autofill:focus,
+			input:-webkit-autofill:active {
+			    transition: background-color 5000s ease-in-out 0s;
+			     -webkit-text-fill-color: white;
+			}
+			#Contact form textarea:focus {
+				border-bottom-color:#d32f2f;
+				box-shadow: 0 1px 0 0 #d32f2f;
+			}
+			#Contact form textarea.active{
+				color:#d32f2f;
+			}
+		#Contact h1 {
+			color: white;
+		}
+
+
+	button {
+		background-color: white !important;
+		color: #1e1e1e !important;
+	}

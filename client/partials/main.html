@@ -4,54 +4,113 @@
 		$(document).ready(function(){
    			$('.parallax').parallax();
    			$('.scrollspy').scrollSpy();
+   			var options = [{selector: '.project', offset: 400, callback: function () {
+   				Materialize.showStaggeredList('#ProjectList');
+   				console.log('callback!')
+   			}}];
+   			 Materialize.scrollFire(options);
 		});
-		</script>
-		<div class="parallax-container">
-	    <div class="parallax">
-	       <img  src="http://calinno.com/images/resource/parallax1.jpg">
-	    </div>
+	</script>
+	<div class = 'sidebar'>
+		<div class = 'row'>
+			<div  class="col hide-on-small-only m3 l2">
+				<ul class="section table-of-contents">
+					<li><a href="#Home">Home</a></li>
+					<li><a href="#Projects">Projects</a></li>
+					<li><a href="#Experience">Experience</a></li>
+					<li><a href="#Contact">Contact</a></li>
+					<li><a target="_blank" href = '/img/gratcliff_resume.pdf'>Resume</a></li>
+				</ul>
+				<p style = 'position: absolute; top: 98.7%; color: white; font-size: 8px;'> © Gabriel Ratcliff 2016 </p>
+		    </div>
+		</div>
+		<div class = 'linkedin' ng-click = 'linkedIn()'>
+			<a target = "_blank" href = 'https://www.linkedin.com/in/gabe-ratcliff-08564279'>
+				<img src = '/img/linkedin.png'>
+			</a>
+		</div>
+		<div class = 'github' ng-click = 'github()'>
+			<a target = "_blank" href = 'https://github.com/gratcliff'>
+				<img src = '/img/github.png'>
+			</a>
+		</div>
 	</div>
-    <div class="row">
-    <div class="col s12 m12 l12">
-      <div id="introduction" class="section scrollspy">
-        <p>In computer programming, initialization is the assignment of an initial value for a data object or variable. The manner in which initialization is performed depends on programming language, as well as type, storage class, etc., of an object to be initialized. Programming constructs which perform initialization are typically called initializers and initializer lists. Initialization is distinct from (and preceded by) declaration, although the two can sometimes be conflated in practice. The complement of initialization is finalization, which is primarily used for objects, but not variables.
-
-		Initialization is done either by statically embedding the value at compile time, or else by assignment at run time. A section of code that performs such initialization is generally known as "initialization code" and may include other, one-time-only, functions such as opening files; in object-oriented programming, initialization code may be part of a constructor (class method) or an initializer (instance method). Setting a memory location to hexadecimal zeroes is also sometimes known as "clearing" and is often performed by an exclusive or instruction (both operands specifying the same variable), at machine code level, since it requires no additional memory access.</p>
-      </div>
-<div class="parallax-container">
-	    <div class="parallax">
-	       <img  src="http://calinno.com/images/resource/parallax1.jpg">
-	    </div>
-	</div>
-      <div id="structure" class="section scrollspy">
-        <p>In an essay, article, or book, an introduction (also known as a prolegomenon) is a beginning section which states the purpose and goals of the following writing. This is generally followed by the body and conclusion.
-
-The introduction typically describes the scope of the document and gives the brief explanation or summary of the document. It may also explain certain elements that are important to the essay if explanations are not part of the main text. The readers can have an idea about the following text before they actually start reading it.
-
-ln technical writing, the introduction typically includes one or more standard subsections: abstract or summary, preface, acknowledgments, and foreword. Alternatively, the section labeled introduction itself may be a brief section found side-by-side with abstract, foreword, etc. (rather than containing them). In this case the set of sections that come before the body of the book are known as the front matter. When the book is divided into numbered chapters, by convention the introduction and any other front-matter sections are unnumbered and precede chapter 1.
-
-Keeping the concept of the introduction the same, different documents have different styles to introduce the written text. For example, the introduction of a Functional Specification consists of information that the whole document is yet to explain. If a Userguide is written, the introduction is about the product. In a report, the introduction gives a summary about the report contents.</p>
-      </div>
-<div class="parallax-container">
-	    <div class="parallax">
-	       <img  src="http://calinno.com/images/resource/parallax1.jpg">
-	    </div>
-	</div>
-      <div id="initialization" class="section scrollspy">
-        <p>Structure is an arrangement and organization of interrelated elements in a material object or system, or the object or system so organized.[1] Material structures include man-made objects such as buildings and machines and natural objects such as biological organisms, minerals and chemicals. Abstract structures include data structures in computer science and musical form. Types of structure include a hierarchy (a cascade of one-to-many relationships), a network featuring many-to-many links, or a lattice featuring connections between components that are neighbors in space </p>
-      </div>
-    </div>
-    <div style = 'right: 0;' class=" navigation col hide-on-small-only m3 l2">
-      <ul class="section table-of-contents">
-        <li><a href="#introduction">Introduction</a></li>
-        <li><a href="#structure">Structure</a></li>
-        <li><a href="#initialization">Intialization</a></li>
-      </ul>
-    </div>
-  </div>
-	<div class="parallax-container">
-	    <div class="parallax">
-	       <img  src="http://calinno.com/images/resource/parallax1.jpg">
-	    </div>
+	<div class = 'main_content'>
+	    <div class="row">
+	    	<div id="Home" class="section scrollspy">
+	   			<h1> Gabriel Ratcliff </h1>
+	   			<p> I'm an aspiring full stack developer versed in MongoDB, NodeJS, AngularJS and Python. My professional background includes Management Consulting and Psychology Research. </p>
+		  	</div>
+			<div id="Projects" class="section scrollspy">
+				<ul id = 'ProjectList'>
+					<li><div id = 'Roomies' class = 'project'>
+						<img class = 'pic' src = '/img/roomies.png'>
+						<p id='clicked'>Show app</p>
+						<h3>Roomies: Integrated Web and iOS.</h3>
+						<p>Roomies is an app that uses iOS and Angular as simultaeneous front ends, sharing a NodeJS/ExpressJS backend. The app allows users in groups, particularly roommates, to designate tasks and completion times for other users in the group, streamlining the process of assigning responsbilities to individuals. The app utilizes Socket.io to seemlessly update information for all users. It also features as chat system for users in the group.</p>
+					</div></li>
+					<li><div id = 'Sequencer' class = 'project'>
+						<a target = "_blank" href = 'http://www.gaberatcliff.com/#/'>
+							<img class = 'pic' src = '/img/sequencer_tab.png'>
+							<p id='clicked'>Show app</p>
+						</a>
+						<h3>Angular Drum Sequencer.</h3>
+						<p>A javascript drum sequencer built primarily with Angular, run on a node server. The goal of this project was to create an intuitive, visually appealing web sequencer. The web audio library HowlerJs, along with Angular's front end controllers allow easy generation of sounds that can be manipulated by users. Everything is tied together with visual cues made with MaterializeCSS.</p>
+					</div></li>
+					<li>
+					<div id = 'Food_guide' class = 'project'>
+						<img class = 'pic' src = '/img/foodies.png'>
+						<p id='clicked'>Show app</p>
+						<h3>Foodies: Targeted Recipe Builder.</h3>
+						<p>Foodies is an app built in Python using an MVC called Pylot that allows database interaction with mySQL. The app uses the Food2Fork recipe API. Foodies allows users to create a profile where they can pick food preferences. It then shows data related to those preferences in a constructive way.</p>
+					</div></li>
+				</ul>
+			</div>
+			<div id="Experience" class="section scrollspy">
+				<div class = 'resume'>
+					<p>Experience</p>
+				</div>
+			</div>
+			<div id="Contact" class="section scrollspy">
+				<div class="container">
+				    <div class="row">
+				        <div class="col m12 s12">
+				            <h1>Contact Me</h1>
+				            <div class="row">
+				                <form class="col s12">
+				                    <div class="row">
+				                        <div class="input-field col m6 s12">
+				                            <input id="first_name" type="text" required ng-model = 'requestEmail.name'>
+				                            <label for="first_name">Full Name</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+				                        <div class="input-field col m6 s12">
+				                            <input id="email" type="email"  required ng-model = 'requestEmail.email'>
+				                            <label for="email">Email</label>
+				                        </div>
+				                        <div class="input-field col m6 s12">
+				                            <input id="company" type="text" ng-model = 'requestEmail.company'>
+				                            <label for="company">Company</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+				                        <div class="input-field col s12">
+				                          <textarea id="message" class="materialize-textarea" ng-model= 'requestEmail.content' required></textarea>
+				                          <label for="message">Message</label>
+				                        </div>
+				                    </div>
+				                    <div class="row">
+				                        <div class="col m12">
+				                         <p class="right-align"><button class="btn btn-large waves-effect waves-red" ng-click = 'submitForm(requestEmail)'>Send Message</button></p>
+				                        </div>
+				                    </div>
+				                </form>
+				            </div>
+				        </div>
+				    </div>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
