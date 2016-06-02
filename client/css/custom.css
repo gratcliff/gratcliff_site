@@ -7,12 +7,29 @@ body{
 	background-color: #1e1e1e;
 	color: white;
 }
+@font-face {
+	font-family: "HK_bold";
+	font-weight: bold;
+	src: url("/../font/HKGrotesk-Bold.otf") format("opentype");
+}
+@font-face {
+	font-family: "HK_med";
+	font-weight: medium;
+	src: url("/../font/HKGrotesk-Medium.otf") format("opentype");
+}
+@font-face {
+	font-family: "HK_reg";
+	src: url("/../font/HKGrotesk-Regular.otf") format("opentype");
+}
+@font-face {
+	font-family: "HK_light";
+	src: url("/../font/HKGrotesk-Light.otf") format("opentype");
+}
 
 
-/*	.background_img {
-		max-width: 100%;
-		height: auto;
-	}*/
+	h1 {
+		font-family: "HK_bold";
+	}
 	.sidebar {
 		position: fixed;
 		height: 100%;
@@ -30,6 +47,7 @@ body{
 			font-size: 35pt;
 			margin-bottom: 50px;
 			margin-left: 10px;
+			font-family: "HK_med";
 		}
 			.sidebar ul li a.active {
 				color: #d32f2f;
@@ -69,7 +87,7 @@ body{
 	#Home h1{
 		position: absolute;
 		color: #CDBFA3;
-		font-size: 8.5vw;
+		font-size: 10vw;
 		top: 25%;
 		left: 10%;
 	}
@@ -77,9 +95,10 @@ body{
 		position: absolute;
 		color: white;
 		top: 50%;
-		left: 10%;
+		left: 12.5%;
 		font-size: 2vw;
-		width: 80%;
+		width: 76%;
+		font-family: "HK_light";
 	}
 	#Projects{
 		width: auto;
@@ -98,9 +117,11 @@ body{
  			margin: 0 auto;
 		}
 			.project h3 {
-				font-size: 1.5vw;
+				font-size:35pt;
 				margin-left: 500px;
 				display: block;
+				font-family: "HK_med";
+				color: #CDBFA3;
 			}
 			.project p {
 				font-size: 1vw;
@@ -108,6 +129,7 @@ body{
 				margin-top: 10px;
 				display: inline-block;
 				width: 70%;
+				font-family: "HK_reg";
 			}
 		#Projects ul li {
 			opacity: 0;
@@ -142,9 +164,36 @@ body{
 		padding: 0 !important;
 	}
 		.resume {
-			height: 80%;
-			margin: 100px;
-			
+			position: absolute;
+			left:10%;
+
+		}
+		#Experience p {
+			font-family: "HK_light";
+		}
+		#Experience ul li {
+			opacity: 0;
+			display: inline-block;
+			height: 85%;
+			width: 15%;
+			margin-left: 8%;
+			margin-top: 5%;
+		}
+		#Experience ul li h3 {
+			color: #CDBFA3;
+			font-size:35pt;
+			font-family: "HK_med";
+		}
+		#Experience ul li p {
+			font-family: "HK_reg";
+			font-size: 1vw;
+		}
+		.special{
+			position: absolute;
+			z-index: -1;
+			font-size: 35vw;
+			left: -3.5%;
+			color: #CDBFA3;
 		}
 
 	#Contact{

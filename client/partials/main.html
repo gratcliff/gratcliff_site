@@ -7,8 +7,31 @@
    			var options = [{selector: '.project', offset: 400, callback: function () {
    				Materialize.showStaggeredList('#ProjectList');
    				console.log('callback!')
+   			}},
+   			{selector: '#Experience', offset: 400, callback: function () {
+   				Materialize.showStaggeredList('.resume');
    			}}];
-   			 Materialize.scrollFire(options);
+   			Materialize.scrollFire(options);
+   			//Controlling Scrolling WIP
+   // 			$(function(){
+			//     var lastScrollTop = 0, delta = 1;
+			//     $(window).on('mousewheel', function (e){
+			//        var st = $(this).scrollTop();
+			       
+			//        if(Math.abs(lastScrollTop - st) < delta){
+			//        	console.log('oops');
+			//        	return
+			//        }
+			//        if (st > lastScrollTop){
+			//            $.scrollTo("100%", 400);
+			//            console.log('down');
+			//        } else {
+			//        	console.log('up');
+			//           $.scrollTo("0%", 400);
+			//        }
+			//        lastScrollTop = st;
+			//     });
+			// });
 		});
 	</script>
 	<div class = 'sidebar'>
@@ -67,9 +90,25 @@
 				</ul>
 			</div>
 			<div id="Experience" class="section scrollspy">
-				<div class = 'resume'>
-					<p>Experience</p>
-				</div>
+				<p class = 'special'>e</p>
+				<ul class = 'resume'>
+					<li><div class = 'resumeItem'>
+						<h3>Coding Dojo</h3>
+						<p>Attended a programming bootcamp at Coding Dojo Silicon Valley. Coding Dojo’s goal is to teach its students how to pick up new programming languages easily. In attendance, I began by learning Python, MySQL, Flask, and had experience with and MVC they developed. Next, I learned MEAN: MongoDB, ExpressJS, AngularJS, and NodeJS. Finally, I learned iOS languages such as Swift and use of XCode. Coming out of this program, I’m confident in my current programming skills and my ability to pick up new ones. </p>
+					</div></li>
+					<li><div class = 'resumeItem'>
+						<h3>Ratcliff Consultants</h3>
+						<p>I worked as a training designer at Ratcliff Consultants. My responsibilities included both adapting previous training materials and creating new ones to the specifications of clients. Producing materials involved learning clients’ systems and synthesizing main ideas. In creating materials, I worked to keep clients’ employees’ motivations in mind, creating the best resources for employees to learn and retain information. I developed in Adobe Captivate and Photoshop. Additionally, I create and edit wiki portals, as well as designed content for websites. </p>
+					</div></li>
+					<li><div class = 'resumeItem'>
+						<h3>Lewis & Clark College</h3>
+						<p>Previous to working as a training designer, I was a research assistant in the Department of Psychology at Lewis and Clark. During my tenure, I contributed to the development and implementation of research regarding intergroup relations. This began as tailoring a proposal to the IRB, and then progressed into developing and adapting methodology. The research culminated in analyzing our data, drawing conclusions, and presenting findings at the Western Psychological Association Conference in 2014. </p>
+					</div></li>
+					<li><div class = 'resumeItem'>
+						<h3>Release UK</h3>
+						<p>I worked as an intern at Release in London in spring of 2013. My responsibilities included curating their social media presence through HootSuite, writing articles for their web portal, and creating infographics through Adobe Photoshop related to their mission. </p>
+					</div></li>
+				</ul>
 			</div>
 			<div id="Contact" class="section scrollspy">
 				<div class="container">
