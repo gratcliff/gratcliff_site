@@ -13,25 +13,36 @@
    			}}];
    			Materialize.scrollFire(options);
    			//Controlling Scrolling WIP
-   // 			$(function(){
-			//     var lastScrollTop = 0, delta = 1;
-			//     $(window).on('mousewheel', function (e){
-			//        var st = $(this).scrollTop();
+   			var prevDiv = null;
+			var current = document.getElementById('Home')
+			var nextDiv = current.nextElementSibling;
+   			$(function(){
+			    var lastScrollTop = 0, delta = 5;
+			    $(window).on('mousewheel', function (e){
+			       var st = $(this).scrollTop();
 			       
-			//        if(Math.abs(lastScrollTop - st) < delta){
-			//        	console.log('oops');
-			//        	return
-			//        }
-			//        if (st > lastScrollTop){
-			//            $.scrollTo("100%", 400);
-			//            console.log('down');
-			//        } else {
-			//        	console.log('up');
-			//           $.scrollTo("0%", 400);
-			//        }
-			//        lastScrollTop = st;
-			//     });
-			// });
+			       if(Math.abs(lastScrollTop - st) < delta){
+			       	console.log('oops');
+			       	return
+			       }
+			       if (st > lastScrollTop){
+			           $.scrollTo(nextDiv, 600);
+			           prevDiv = current;
+			           current = nextDiv;
+			           nextDiv = current.nextElementSibling;
+			           console.log(prevDiv);
+			       } 
+			       else {
+			       	$.scrollTo(prevDiv, 600);
+			       	nextDiv = current;
+			       	current = prevDiv;
+			       	prevDiv = current.previousElementSibling;
+			       	console.log(current);
+			       }
+
+			       lastScrollTop = st;
+			    });
+			});
 		});
 	</script>
 	<div class = 'sidebar'>
