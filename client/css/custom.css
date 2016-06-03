@@ -124,11 +124,12 @@ body{
 				color: #CDBFA3;
 			}
 			.project p {
-				font-size: 1vw;
+				font-size: 1.25vw;
 				margin-left: 500px;
 				margin-top: 10px;
 				display: inline-block;
-				width: 70%;
+				width: 45%;
+				height: auto;
 				font-family: "HK_reg";
 			}
 		#Projects ul li {
