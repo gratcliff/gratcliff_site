@@ -129,10 +129,9 @@ body{
 			}
 			.project p {
 				position: absolute;
-				top:20%;
+				top:35%;
 				font-size: 1.15vw;
 				margin-left: 200px;
-				margin-top: 10px;
 				display: inline-block;
 				width: 50%;
 				height: auto;
