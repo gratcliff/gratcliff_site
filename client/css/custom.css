@@ -211,6 +211,7 @@ body{
 		}
 			#Contact form label{
 				color: white;
+				font-family: 'HK_reg'
 			}
 			#Contact form input:focus {
 				border-bottom-color:#d32f2f;
@@ -218,6 +219,7 @@ body{
 			}
 			#Contact form label.active{
 				color:#d32f2f;
+				font-family: 'HK_reg'
 			}
 			input:-webkit-autofill,
 			input:-webkit-autofill:hover,
@@ -234,7 +236,8 @@ body{
 				color:#d32f2f;
 			}
 		#Contact h1 {
-			color: white;
+			color: #CDBFA3;
+			font-family: "HK_med"
 		}
 
 
