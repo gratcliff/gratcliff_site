@@ -5,7 +5,7 @@
    			$('.parallax').parallax();
    			$('.scrollspy').scrollSpy();
    			var options = [{selector: '.project', offset: 400, callback: function () {
-   				Materialize.showStaggeredList('#ProjectList');
+   				Materialize.showStaggeredList('#Projects');
    				console.log('callback!')
    			}},
    			{selector: '#Experience', offset: 400, callback: function () {
@@ -84,28 +84,27 @@
 	   			<p> I'm an aspiring full stack developer versed in MongoDB, NodeJS, AngularJS and Python. My professional background includes Management Consulting and Psychology Research. </p>
 		  	</div>
 			<div id="Projects" class="section scrollspy">
-				<ul id = 'ProjectList'>
-					<li><div id = 'Roomies' class = 'project'>
+				<ul>
+					<li class = 'project'>
 						<img class = 'pic' src = '/img/roomies.png'>
 						<p id='clicked'>Show app</p>
 						<h3>Roomies: Integrated Web and iOS.</h3>
 						<p>Roomies is an app that uses iOS and Angular as simultaeneous front ends, sharing a NodeJS/ExpressJS backend. The app allows users in groups, particularly roommates, to designate tasks and completion times for other users in the group, streamlining the process of assigning responsbilities to individuals. The app utilizes Socket.io to seemlessly update information for all users. It also features as chat system for users in the group.</p>
-					</div></li>
-					<li><div id = 'Sequencer' class = 'project'>
+					</li>
+					<li class = 'project'>
 						<a target = "_blank" href = 'http://www.gaberatcliff.com/#/'>
 							<img class = 'pic' src = '/img/sequencer_tab.png'>
 							<p id='clicked'>Show app</p>
 						</a>
 						<h3>Angular Drum Sequencer.</h3>
 						<p>A javascript drum sequencer built primarily with Angular, run on a node server. The goal of this project was to create an intuitive, visually appealing web sequencer. The web audio library HowlerJs, along with Angular's front end controllers allow easy generation of sounds that can be manipulated by users. Everything is tied together with visual cues made with MaterializeCSS.</p>
-					</div></li>
-					<li>
-					<div id = 'Food_guide' class = 'project'>
+					</li>
+					<li class = 'project'>
 						<img class = 'pic' src = '/img/foodies.png'>
 						<p id='clicked'>Show app</p>
 						<h3>Foodies: Targeted Recipe Builder.</h3>
 						<p>Foodies is an app built in Python using an MVC called Pylot that allows database interaction with mySQL. The app uses the Food2Fork recipe API. Foodies allows users to create a profile where they can pick food preferences. It then shows data related to those preferences in a constructive way.</p>
-					</div></li>
+					</li>
 				</ul>
 			</div>
 			<div id="Experience" class="section scrollspy">

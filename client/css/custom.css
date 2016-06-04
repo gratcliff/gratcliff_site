@@ -106,15 +106,13 @@ body{
 		display: block;
 		padding: 0 !important;
 		background-color: #1e1e1e;
-
 	}
+
 		.project {
 			max-height: 27%;
 			width: 90%;
 			display: block;
 			margin-top: 50px !important;
-/*			margin: 50px 25px 0 0;*/
-			/*position: relative;*/
  			margin: 0 auto;
 		}
 			.project h3 {
@@ -139,6 +137,7 @@ body{
 			}
 		#Projects ul li {
 			opacity: 0;
+			margin-bottom: 50px;
 		}
 		#clicked{
 			display: inline-block;
@@ -169,7 +168,7 @@ body{
 		padding: 0 !important;
 	}
 		.resume {
-			position: relative;
+			position: absolute;
 			left:10%;
 
 		}
@@ -181,8 +180,8 @@ body{
 			display: inline-block;
 			height: 85%;
 			width: 15%;
-			margin-right: 8%;
-			margin-top: 5%;
+			margin-right: 9%;
+			margin-top: 0%;
 		}
 		#Experience ul li h3 {
 			color: #CDBFA3;
@@ -193,15 +192,8 @@ body{
 			font-family: "HK_light";
 			font-size: 1vw;
 		}
-		.special{
-			position: absolute;
-			z-index: -1;
-			font-size: 35vw;
-			left: -3.5%;
-			color: #CDBFA3;
-		}
-
 	#Contact{
+		margin-top: 200px;
 		width: auto;
 		height: 83.5%;
 		display: block;
