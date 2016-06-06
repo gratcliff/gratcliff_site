@@ -107,32 +107,18 @@ body{
 		padding: 0 !important;
 		background-color: #1e1e1e;
 	}
-
-		.project {
-			max-height: 27%;
-			width: 90%;
-			display: block;
-			margin-top: 50px !important;
- 			margin: 0 auto;
-		}
 			.project h3 {
-				position: absolute;
-				top:-7%;
 				font-size:35pt;
-				margin-bottom: 50px;
-				left: 30%;
+				margin-bottom: 25px;
+				margin-left: 2% !important;
 				display: block;
 				font-family: "HK_med";
 				color: #CDBFA3;
 			}
 			.project p {
-				position: absolute;
-				top:35%;
-				font-size: 1.15vw;
-				margin-left: 200px;
-				display: inline-block;
-				width: 50%;
-				height: auto;
+				font-size: 1vw;
+				margin-left: 2% !important;
+				display: block;
 				font-family: "HK_light";
 			}
 		#Projects ul li {
@@ -140,10 +126,8 @@ body{
 			margin-bottom: 50px;
 		}
 		#clicked{
-			display: inline-block;
 			position: absolute;
-			margin-left: 125px;
-			margin-top: 100px;
+			margin: 8vh 2vw !important;
 			opacity: 0;
 			color: white;
 			font-size: 2.5vw;
@@ -151,8 +135,6 @@ body{
 		 img.pic {
 			height:auto;
 			max-width: 18%;
-			display: inline-block;
-			left: 10%;
 		}
 		img:hover {
 			opacity: 0.3;
@@ -162,6 +144,7 @@ body{
 		}
 
 	#Experience{
+		margin-top: 100px !important;
 		width: auto;
 		height: 100%;
 		display: block;
