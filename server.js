@@ -8,7 +8,7 @@ app.use(express.static(path.join(__dirname, './client')));
 
 
 
-app.set('port', (process.env.PORT || 2020));
+app.set('port', (process.env.PORT || 8000));
 app.set('/', function (req, res){
 	res.send("<h1> Hello World </h1>");
 })
