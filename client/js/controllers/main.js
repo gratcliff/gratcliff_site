@@ -20,4 +20,5 @@ personalApp.controller('MainController', function ($scope, $location, $window){
 		}
 		$scope.requestEmail = {};
 	}
+	
 })
