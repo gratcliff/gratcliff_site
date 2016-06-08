@@ -1,4 +1,4 @@
-personalApp.controller('MainController', function ($scope, $location, $window){
+personalApp.controller('MainController', function ($scope, $location, $window, backendFactory){
 
 	$scope.formError = [];
 	$scope.success;
@@ -18,6 +18,13 @@ personalApp.controller('MainController', function ($scope, $location, $window){
 		if (formData.content.length < 15){
 			$scope.formError.push("Please elaborate on your interest.")
 		}
+		var sendObj = {};
+		sendObj.name = formData.name;
+		sendObj.email = formData.email;
+		sendObj.content = formData.content;
+		backendFactory.sendMail(sendObj, function (data){
+			console.log('yay!')
+		})
 		$scope.requestEmail = {};
 	}
 	
