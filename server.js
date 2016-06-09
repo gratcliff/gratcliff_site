@@ -9,22 +9,27 @@ app.use(express.static(path.join(__dirname, './client')));
 var mailOptions = {};
 
 
-var smtpConfig = nodemailer.createTransport("SMTP",{
+var smtpConfig = {
    service: "Gmail",
    host: 'smtp.gmail.com',
    port: 465,
    auth: {
        user: "gaberatcliff@gmail.com",
-       pass: "*********"
-   }
-});
+       pass: "******"
+   },
+   tls:{
+        secureProtocol: "TLSv1_method"
+    }, 
+    debug: true
+};
+
 
 // create reusable transporter object using the default SMTP transport 
 var transporter = nodemailer.createTransport(smtpConfig);
 app.post('/email', function(req, res){
 	// setup e-mail data with unicode symbols 
 		var mailOptions = {
-		    from: req.body.name +  "<" + req.body.email +">", // sender address 
+		    from: req.body.name +  " <" + req.body.email +">", // sender address 
 		    to: 'gaberatcliff@gmail.com', // list of receivers 
 		    subject: 'Message From Website!', // Subject line 
 		    text: req.body.content
